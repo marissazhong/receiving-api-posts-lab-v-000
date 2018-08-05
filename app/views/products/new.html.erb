@@ -29,10 +29,10 @@ $(function () {
 
     var values = $(this).serialize();
 
-    var posting = $.post('/posts', values);
+    var product = $.post('/products', values);
 
-    posting.done(function(data) {
-      var post = data;
+    product.done(function(data) {
+      var product = data;
       $("#productName").text(product["name"]);
       $("#productPrice").text(product["price"]);
       $("#productDescription").text(product["description"]);
