@@ -29,9 +29,9 @@ $(function () {
 
     var values = $(this).serialize();
 
-    var product = $.post('/products', values);
+    var new_product = $.post('/products', values);
 
-    product.done(function(data) {
+    new_product.done(function(data) {
       var product = data;
       $("#productName").text(product["name"]);
       $("#productPrice").text(product["price"]);
